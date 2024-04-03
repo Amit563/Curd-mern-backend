@@ -18,7 +18,7 @@ app.use(express.json()); // it is convert  into json
 dotenv.config();
 app.use(cookieParser());
 
-const PORT = 4000 || process.env.PORT;
+const PORT = process.env.PORT || 4000;
 
 connectDB()
   .then(() => {
